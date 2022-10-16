@@ -1,0 +1,15 @@
+<script>
+    class A{
+        constructor(){
+            console.log('constructor A')
+        }
+    }
+    class B extends A{
+        constructor(){
+            super()
+            console.log('constructor B')
+            console.log(this);
+        }
+    }
+    var rec = new B();
+</script>

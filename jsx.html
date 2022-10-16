@@ -1,0 +1,34 @@
+<!-- react cdn file -->
+  <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+<!-- bootstrap -->
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+<!-- instead of doing it like 1.html(tedeious task) its easy to do using JSX , jsx helps to combine UI logic and rendering logic
+This means that you can use JSX inside of if statements and for loops, assign it to variables, accept it as arguments, and return it from functions:
+-->
+
+<!-- Load Babel -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<div id="root">
+
+</div>
+
+<script type="text/babel"> // in script tag we cannot use html tag directly thtas why we are using babel compiler
+    var user= "abc"
+    // UI logic
+    var record = (<div class="container"> 
+    <div class="row">
+        <div class="col-xl-3">
+            this is rendering logic,{user}  
+        </div>
+    </div>
+</div>)
+
+ReactDOM.render(record,document.getElementById("root"))
+</script>

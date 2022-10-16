@@ -1,0 +1,19 @@
+<!-- Promise based HTTP client for the browser and node.js 
+use axios to perform CRUD operation from API-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js" integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<button onclick="myfun()">click here</button>
+<script>
+    function myfun(){
+        console.log(axios);
+        var result = axios.get("https://fakestoreapi.com/products")
+        console.log(result);
+        result.then((val)=>{
+            console.log(val,val.data);
+        })
+    }
+    //get :- recieve data from any api
+    //put :- 
+    //recieve :-
+    //delete :-
+</script>

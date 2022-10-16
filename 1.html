@@ -1,0 +1,22 @@
+<!-- react cdn file -->
+  <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+<!-- bootstrap -->
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+<!-- target element -->
+ <div id="root"> 
+
+ </div>
+
+  <script>
+    // console.log(React);
+    console.log(ReactDOM);
+    
+    var h1tag = React.createElement('h1',{'class' : 'text-center'},"Cdac"); // React.createElement(tag name,attribute or properties ,text or content);
+    ReactDOM.render(h1tag,document.getElementById('root')); //(The purpose of the function is to display the specified HTML code inside the specified HTML element.)ReactDOM.render(html code,html element)
+  </script>

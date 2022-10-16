@@ -1,0 +1,16 @@
+<script>
+    var record = new Promise((res,rej)=>{
+        console.log(typeof res, typeof rej);
+        //res("task is comleted");
+        rej("task is rejected")
+    }) //three states of promises pending fullfilled and rejected
+    console.log(record);
+    record.then((value)=>{  ////then is handler to resolve values
+        console.log(value);
+        }).catch((error) => {
+            console.log(error);
+        }).finally(() => {
+            console.log("lets go for another task");
+        })
+        //initilayy promeses will be in pending mode then if promise in resolved mode it will be handled by then and if promise is rejected  it will be handled by catch handler and finally will be executed no matter if promises is rejected or resolve
+</script>

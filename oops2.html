@@ -1,0 +1,18 @@
+<script>
+    class tv{  //storage
+    
+        constructor(){
+            console.log("Constructur is called");  //constructor
+            this.channel = "cbn"
+        }
+
+        volume()
+        {
+            console.log("dolby sound");  //method
+            console.log(this.channel);
+        }
+    }
+    var rec = new tv();  
+    var rec1 = new tv();  // two times construcor will be called
+    rec.volume();
+</script>

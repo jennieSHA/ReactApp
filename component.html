@@ -1,0 +1,43 @@
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+<!-- bootstrap -->
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+<!-- instead of doing it like 1.html(tedeious task) its easy to do using JSX , jsx helps to combine UI logic and rendering logic-->
+
+<!-- Load Babel -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- target element -->
+<div id="root"> 
+
+</div>  
+
+<script type="text/babel">
+//Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.
+
+
+ function Product(xyz){  //function component (it must have first letter capital and must return something) function component(xyz is properties/props)
+    console.log(xyz);
+    return(<div class="col-xl-3">
+        <img class = "img-fluid" src={xyz.imgpath} alt=""/>  
+        <h2>{xyz.price}</h2>
+        <p>{xyz.name}</p>
+        <p><button>add to cart</button></p>
+    </div>) 
+ }
+
+ var record = (<div class="container">
+    <div class="row">
+        <Product name="product1" price = "1000" imgpath="https://rukminim1.flixcart.com/image/200/200/l4hcx3k0/kids-shoe/u/r/z/-original-imagfdgkhkxqwnzn.jpeg?q=70">
+        </Product>  {/* two ways to write comment 1.paired*/}
+        <Product name="product2" price = "3000" imgpath = "https://rukminim1.flixcart.com/image/200/200/kwdv3bk0/musical-toy/0/j/i/dancing-cactus-toy-talking-game-cactus-toy-120-songs-talking-original-imag92m9jaf7ndkp.jpeg?q=70"/> {/*2.unpiared*/}
+
+        <Product name="product3" price = "5000" imgpath = "https://rukminim1.flixcart.com/image/200/200/l1v1uvk0/tablet/9/c/s/6650034-realme-original-imagdc5ac3y7xgxh.jpeg?q=70"/>
+
+        <Product name="product4" price = "2000" imgpath = "https://rukminim1.flixcart.com/image/200/200/kwpam4w0/jean/k/t/h/32-praw21jn0109a-provogue-original-imag9bpyy6crrjsz.jpeg?q=70"/>
+    </div>
+</div>)
+ReactDOM.render(record,document.getElementById("root"))
+</script>

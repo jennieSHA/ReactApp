@@ -1,0 +1,20 @@
+<script>
+    class A{
+    myFunction1(){
+        console.log("In class a");
+    }
+}
+class B extends A{
+    myFunction2(){
+        console.log("In class b");
+    }
+    myFunction1(){
+        super.myFunction1()  // accessing parent members
+        console.log("In class b my function 1");  //method overriding
+    }
+}
+var rec = new B()
+console.log(rec);
+rec.myFunction1();  // we have created object using class B so Class b method will be called here
+rec.myFunction2();
+</script>
